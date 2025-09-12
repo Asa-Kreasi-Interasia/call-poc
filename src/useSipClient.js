@@ -68,7 +68,7 @@ export const useSipClient = () => {
 
       if (session.current.direction === 'incoming') {
         const options = {
-          mediaConstraints: { audio: true, video: true },
+          mediaConstraints: { audio: true, video: false },
           pcConfig: {
             rtcpMuxPolicy: 'require',
             iceServers: []
@@ -93,7 +93,7 @@ export const useSipClient = () => {
     }
 
     const options = {
-      mediaConstraints: { audio: true, video: true },
+      mediaConstraints: { audio: true, video: false },
       pcConfig: {
         rtcpMuxPolicy: 'require',
         iceServers: []
